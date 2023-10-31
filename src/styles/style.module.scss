@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap');
+@import './color.scss';
+@import './mixin.scss';
+
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+  position: sticky !important;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 6em;
+  @include small {
+    padding: 1em;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    a {
+      text-decoration: none;
+      color: yellow;
+    }
+    span {
+      font-weight: 800;
+      @include small {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.card {
+  &:hover {
+    opacity: 80%;
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+  h5 {
+    font-weight: 800;
+  }
+  p {
+    margin: 0.25rem 0;
+    .info {
+      font-weight: 600;
+    }
+  }
+}
+
+.container {
+  margin: 3rem;
+  margin-left: 4rem;
+  flex-direction: row;
+  @include small {
+    margin: 2rem 1rem;
+  }
+  h4 {
+    font-weight: 800;
+    margin-top: 2rem;
+  }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    .button {
+      margin-bottom: 4rem !important;
+    }
+    span {
+      font-size: 14px;
+      padding-left: 0.5rem;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10rem;
+    @include xl {
+      flex-direction: column;
+      gap: 5rem;
+    }
+    img {
+      max-width: 30em;
+      height: 20em;
+      @include small {
+        margin: 0 1rem;
+        height: 15em;
+      }
+    }
+    h5 {
+      font-weight: 800;
+    }
+
+    .details_container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .details {
+        display: flex;
+        gap: 10rem;
+        @include small {
+          flex-direction: column;
+          gap: 2rem;
+        }
+        p {
+          margin: 0;
+        }
+      }
+      .borders {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        span {
+          @include xl {
+            width: 100%;
+          }
+        }
+      }
+      .info {
+        font-weight: 600;
+      }
+    }
+  }
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    @include small {
+      flex-direction: column;
+    }
+    .search {
+      margin-bottom: 2rem;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      @include small {
+        width: 100%;
+      }
+    }
+    .dropdown {
+      max-width: 12rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      @include small {
+        width: 50%;
+      }
+    }
+  }
+}
